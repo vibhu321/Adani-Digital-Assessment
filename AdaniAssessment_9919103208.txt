@@ -1,0 +1,35 @@
+Q1 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int row,col;
+    cin>>row>>col;
+    int list[col][row];
+    for(int i=0;i<col;i++)
+    {
+        for(int j=0;j<row;j++)
+        {
+            list[i][j] = rand()%100 ;
+        }
+    }
+    return list;
+}
+
+Q2
+#include <bits/stdc++.h>
+using namespace std;
+bool colsort(const vector<int>& v1, const vector<int>& v2)
+{
+    return v1[0] < v2[0];
+}
+int main()
+{
+    vector<vector<int> > vect{ { 3, 5, 1 },
+                               { 4, 8, 6 },
+                               { 7, 2, 9 } };
+    int m = vect.size();
+    int n = vect[0].size();
+    sort(vect.begin(), vect.end(), colsort);
+    return vect;
+}
